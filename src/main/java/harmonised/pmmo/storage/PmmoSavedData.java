@@ -8,7 +8,6 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 import com.mojang.serialization.Codec;
-import harmonised.pmmo.api.enums.EventType;
 import harmonised.pmmo.api.events.XpEvent;
 import harmonised.pmmo.config.Config;
 import harmonised.pmmo.config.SkillsConfig;
@@ -16,7 +15,6 @@ import harmonised.pmmo.config.codecs.CodecTypes;
 import harmonised.pmmo.config.codecs.SkillData;
 import harmonised.pmmo.core.Core;
 import harmonised.pmmo.core.IDataStorage;
-import harmonised.pmmo.features.fireworks.FireworkHandler;
 import harmonised.pmmo.features.loot_modifiers.SkillUpTrigger;
 import harmonised.pmmo.network.Networking;
 import harmonised.pmmo.network.clientpackets.CP_UpdateExperience;
@@ -80,8 +78,8 @@ public class PmmoSavedData extends SavedData implements IDataStorage{
 			//capture command cases for XP gain which should prompt a skillup event
 			if (formerRaw != getLevelFromXP(value)) {
 				SkillUpTrigger.SKILL_UP.trigger(player);
-				Core.get(LogicalSide.SERVER).getPerkRegistry().executePerk(EventType.SKILL_UP, player,
-					TagBuilder.start().withString(FireworkHandler.FIREWORK_SKILL, skillName).build());
+//				Core.get(LogicalSide.SERVER).getPerkRegistry().executePerk(EventType.SKILL_UP, player,
+//					TagBuilder.start().withString(FireworkHandler.FIREWORK_SKILL, skillName).build());
 			}
 		}
 	}
@@ -118,8 +116,8 @@ public class PmmoSavedData extends SavedData implements IDataStorage{
 				return false;
 			
 			if (gainXpEvent.isLevelUp()) 
-				Core.get(LogicalSide.SERVER).getPerkRegistry().executePerk(EventType.SKILL_UP, player,
-						TagBuilder.start().withString(FireworkHandler.FIREWORK_SKILL, skill).build());
+//				Core.get(LogicalSide.SERVER).getPerkRegistry().executePerk(EventType.SKILL_UP, player,
+//						TagBuilder.start().withString(FireworkHandler.FIREWORK_SKILL, skill).build());
 			setPlayerSkillLevel(gainXpEvent.skill, playerID, gainXpEvent.endLevel());
 		}
 		else 
