@@ -13,13 +13,13 @@
     },
     "requirements":{
         "WEAR": {
-            "mining": 10
+            "mining": 0
         },
         "TOOL": {
-            "mining": 10
+            "mining": 0
         },
         "WEAPON": {
-            "combat": 10
+            "combat": 0
         }
     },
     "bonuses":{

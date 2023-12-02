@@ -13,13 +13,13 @@
     },
     "requirements":{
         "WEAR": {
-            "woodcutting": 60
+            "woodcutting": 0
         },
         "TOOL": {
-            "woodcutting": 60
+            "woodcutting": 0
         },
         "WEAPON": {
-            "combat": 30
+            "combat": 0
         }
     },
     "negative_effect":{

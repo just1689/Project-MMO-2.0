@@ -13,13 +13,13 @@
     },
     "requirements":{
         "WEAR": {
-            "excavation": 90
+            "excavation": 0
         },
         "TOOL": {
-            "excavation": 90
+            "excavation": 0
         },
         "WEAPON": {
-            "combat": 60
+            "combat": 0
         }
     },
     "negative_effect":{

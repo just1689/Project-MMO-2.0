@@ -17,7 +17,7 @@
     },
     "requirements":{
         "INTERACT":{
-            "building": 90
+            "building": 0
         },
         "USE":{
             "building": 90
