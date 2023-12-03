@@ -118,8 +118,8 @@ public class PerksConfig {
 		
 		//=====================SUBMERGED DEFAULTS========================
 		bodyList.add(TagBuilder.start().withString("perk", "pmmo:breath").withString(APIUtils.SKILLNAME, "swimming").build());
-		bodyList.add(TagBuilder.start().withString("perk", "pmmo:effect").withString(APIUtils.SKILLNAME, "swimming")
-				.withString("effect", "minecraft:night_vision").build());
+//		bodyList.add(TagBuilder.start().withString("perk", "pmmo:effect").withString(APIUtils.SKILLNAME, "swimming")
+//				.withString("effect", "minecraft:night_vision").build());
 		defaultSettings.put(EventType.SUBMERGED, new ArrayList<>(bodyList));
 		bodyList.clear();
 
